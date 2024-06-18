@@ -1,7 +1,7 @@
-import React from 'react';
-import { Navbar, Container, Nav} from "react-bootstrap";
-import logo from '../assets/va_logo.png'
-import styles from '../styles/NavBar.module.css';
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/va_logo.png";
+import styles from "../styles/NavBar.module.css";
 
 const NavBar = () => {
   return (
