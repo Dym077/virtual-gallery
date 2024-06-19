@@ -7,9 +7,6 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from './pages/auth/SignInForm';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null)
-
- 
   return (
       <div className={styles.App}>
         <NavBar />
