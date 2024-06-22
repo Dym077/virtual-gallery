@@ -23,6 +23,8 @@ const Post = (props) => {
     setPosts,
   } = props;
 
+  console.log(props)
+
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
