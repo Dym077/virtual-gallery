@@ -86,7 +86,7 @@ const Post = (props) => {
             <span>{updated_at}</span>
             {is_owner && postPage && (
               <MoreDropdown
-                handeEdit={handleEdit}
+                handleEdit={handleEdit}
                 handleDelete={handleDelete}
               />
             )}
