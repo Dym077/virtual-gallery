@@ -73,6 +73,85 @@ The epics represent the main project parts that includes all related user storie
 ## Planning
 
 ### Mockups
+#### Mobile wireframes
+
+* Signup and signin page
+
+<details>
+
+![Mobile Signup](/documentation/mobile_signup.png)
+![Mobile Signin](/documentation/mobile_signin.png)
+
+</details>
+
+* Landing page
+
+<details>
+
+![Mobile Landing](/documentation/mobile_landing.png)
+
+</details>
+
+* Profile page
+
+<details>
+
+![Mobile Profile](/documentation/mobile_profile.png)
+![Mobil Edit Profile](/documentation/mobile_edit_profile.png)
+
+</details>
+
+* Reviews
+
+<details>
+
+![Mobile Reviews](/documentation/mobile_edit_review.png)
+
+</details>
+
+#### Desktop wireframes
+
+* Signup and signup page
+
+<details>
+
+![Desktop Signup](/documentation/desktop_signup.png)
+![Desktop Signin](/documentation/desktop_signin.png)
+
+</details>
+
+* Landing page
+
+<details>
+
+![Desktop Landing](/documentation/desktop_landing.png)
+
+</details>
+
+* Post feed
+
+<details>
+
+![Post feed](/documentation/desktop_feed.png)
+
+</details>
+
+* Profile page
+
+<details>
+
+![Profile Page](/documentation/desktop_profile.png)
+![Edit Profile Page](/documentation/desktop_edit_profile.png)
+
+</details>
+
+* Comments
+
+<details>
+
+![Desktop Comments](/documentation/desktop_comment.png)
+
+</details>
 
 ### Data models
 
@@ -112,7 +191,7 @@ The epics represent the main project parts that includes all related user storie
 ### Axios
 
 ### React Bootstrap Icons
-- [React Bootstrap Icons](https://www.npmjs.com/package/react-bootstrap-icons) - 
+- [React Bootstrap Icons](https://www.npmjs.com/package/react-bootstrap-icons) 
 
 
 ### Custom hooks
