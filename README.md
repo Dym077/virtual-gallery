@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# Virtual Art Gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img src=" " width=600>
+</p>
+<p align="center">
+    Image generated using <a href="https://ui.dev/amiresponsive" target="_blank">https://ui.dev/amiresponsive</a>
+</p>
 
-## Available Scripts
+## Project goals
 
-In the project directory, you can run:
+## Table of contents
+- [](#)
+  * [Project Goals](#project-goals)
+  * [Table of contents](#table-of-contents)
+  * [User stories](#user-stories)
+    + [Epics](#epics)
+    + [User stories](#user-stories-1)
+  * [Agile development methodology](#agile-development-methodology)
+  * [Planning](#planning)
+    + [Mockups](#mockups)
+    + [Data models](#data-models)
+  * [Design](#design)
+    + [Colours](#colours)
+    + [Fonts](#fonts)
+  * [Features](#features)
+    + [Landing page](#)
+    + [Sign-up form](#sign-up-form)
+    + [Sign-in form](#sign-in-form)
+    + [Header](#header)
+    + [CRUD functionality](#crud-functionality)
+    + [Future improvements and features](#future-improvements-and-features)
+      - [Short term future improvements](#short-term-future-improvements)
+      - [Long term future features](#longer-term-future-features)
+  * [Frameworks, libraries and dependencies](#frameworks--libraries-and-dependencies)
+    + [React-Router-DOM](#react-router-dom)
+    + [ReactDOM](#reactdom)
+    + [Axios](#axios)
+    + [React Bootstrap Icons](#react-bootstrap-icons)
+    + [Custom hooks](#custom-hooks)
+  * [Testing](#testing)
+    + [Manual testing](#manual-testing)
+    + [Validator testing](#validator-testing)
+    + [W3C CSS validator](#w3c-css-validator)
+    + [ESLint JavaScript validator](#eslint-javascript-validator)
+    + [WAVE web accessability testing](#wave-web-accessability-testing)
+    + [Lighthouse testing](#lighthouse-testing)
+    + [Resolved bugs](#resolved-bugs)
+    + [Unresolved bugs](#unresolved-bugs)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
+    + [Code](#code)
+    + [Media](#media)
+  * [Acknowledgements](#acknowledgements)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## User stories
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Epics
 
-### `npm test`
+### User stories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Agile development methodology
 
-### `npm run build`
+## Planning
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Mockups
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Data models
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design
 
-### `npm run eject`
+### Colours
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Fonts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Landing page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Sign-up form
 
-## Learn More
+### Sign-in form
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### CRUD functionality
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Future improvements and features
 
-### Analyzing the Bundle Size
+#### Short term future improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Long term future features
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Frameworks, libraries and dependencies
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### React-Router-DOM
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### ReactDOM
 
-### `npm run build` fails to minify
+### Axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### React Bootstrap Icons
+- [React Bootstrap Icons](https://www.npmjs.com/package/react-bootstrap-icons) - 
+
+
+### Custom hooks
+
+## Testing
+
+### Manual testing
+
+
+### Validator testing
+
+### W3C CSS validator
+
+
+### ESLint JavaScript validator
+
+
+### Lighthouse testing
+
+### Resolved bugs
+
+### Unresolved bugs
+
+
+## Deployment
+Deployments to Heroku can be dome following theses steps:
+
+- Fork or clone the repository in GitHub.
+- If you have also cloned and deployed your own version of the backend API, you will need to ensure the value of `axios.defaults.baseURL` in `src/api/axiosDefaults.js` is set to the base URL for your API. Pull to your local development environment and push back to GitHub if necessary; otherwise, leave as is to use the original API.
+- Log in to your Heroku account.
+- Select 'Create new app' from the 'New' menu at the top right.
+- Enter a name for the app and select the region you are located in.
+- Select 'Create app'.
+- Select the 'Deploy' tab at the top.
+- Select 'GitHub' from the deployment method options to confirm you wish to deploy using GitHub. You may be asked to enter your GitHub password.
+- Find the 'Connect to GitHub' section and use the search box to locate your repo.
+- Select 'Connect' when you have found your repo.
+- Optionally, you may choose the main branch under 'Automatic Deploys' and select 'Enable Automatic Deploys' if you want your deployed site to be automatically redeployed every time you push changes to GitHub.
+- Find the 'Manual Deploy' section, choose 'main' as the branch to deploy and select 'Deploy Branch'.
+
+When deployment is complete, you will be given a link to the deployed site.
+
+## Credits
+
+### Code
+
+### Media
+
+## Acknowledgements
