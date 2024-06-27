@@ -7,7 +7,13 @@
     Image generated using <a href="https://ui.dev/amiresponsive" target="_blank">https://ui.dev/amiresponsive</a>
 </p>
 
-## Project goals
+## Project objective
+
+Virtual Art Gallery is a social media website which allows for viual artists and afficionados of art to get together, interact and share their work and ideas. The primary objective of this site is to:
+1) Let aspiring artists and creators of visual art (painting, drawing photography etc) to share and describe their work to the public.
+2) Allow users of the site to view artwork, like and comment on artwork and each others posts. 
+3) Provide a way for artists and other users to interact.
+4) Let user review and provide feedback on published artwork.
 
 ## Table of contents
 - [](#)
@@ -55,8 +61,10 @@
 
 
 ## User stories
+All user stories and epics are listed in full in the [README for the API ](https://github.com/Dym077/drf-api02)
 
 ### Epics
+The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "donr" column.
 
 ### User stories
 
