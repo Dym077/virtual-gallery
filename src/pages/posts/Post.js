@@ -24,7 +24,8 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-
+  console.log('comments_count', comments_count)
+  
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();

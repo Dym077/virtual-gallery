@@ -214,7 +214,7 @@ The epics represent the main project parts that includes all related user storie
 ### Resolved bugs
 
 ### Unresolved bugs
-
+The DOM returns a NaN message when a user submits a comment on another user's post. The reason for this error is not to be found in the front end, but should be caused when the integer from the API isn't properly read by the DOM, believing it to be a string rather than an integer. 
 
 ## Deployment
 Deployments to Heroku can be dome following theses steps:
