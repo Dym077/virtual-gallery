@@ -30,10 +30,25 @@ Virtual Art Gallery is a social media website which allows for viual artists and
     + [Colours](#colours)
     + [Fonts](#fonts)
   * [Features](#features)
-    + [Landing page](#)
+    + [Header](#header)
+    + [Landing page](#landing-page)
     + [Sign-up form](#sign-up-form)
     + [Sign-in form](#sign-in-form)
-    + [Header](#header)
+    + [Home Page](#home-page)
+    + [Upload Posts](#upload-posts)
+    + [Edit Posts](#edit-posts)
+    + [Delete Posts](#delete-posts)
+    + [Like Posts](#like-posts)
+    + [Comments Form](#comments-form)
+    + [Edit Comments](#edit-comments)
+    + [Delete Comments](#delete-comments)
+    + [Profile Page](#profile-page)
+    + [Profile Image](#profile-image)
+    + [Edit Profile](#edit-profile)
+    + [Follow Profiles](#follow-profiles)
+    + [Artist Profile](#artist-profile)
+    + [Top Artists](#top-artists)
+    + [Reviews](#reviews)
     + [CRUD functionality](#crud-functionality)
     + [Future improvements and features](#future-improvements-and-features)
       - [Short term future improvements](#short-term-future-improvements)
@@ -163,12 +178,21 @@ The epics represent the main project parts that includes all related user storie
 
 ## Features
 
+### Header
+The header contains the logotype and the navbar.
+
 ### Landing page
+The landing page is the first page the user will see when navigating to the site.
+The menu and the feed are visible on the page.
 
 ### Sign-up form
+With the sign-up form, a new user can provide a unique username and a password. The user will be asked to confirm the password and can then use the sign-in form to access the page.
 
 ### Sign-in form
+A returning user can use the sign-in form to access the page. By entering the username and the password, the user will be able to login.
 
+### Home page
+This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user. 
 
 ### CRUD functionality
 
