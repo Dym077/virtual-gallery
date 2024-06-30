@@ -78,6 +78,13 @@ const NavBar = () => {
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
+      <NavLink 
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/contact"
+      >
+        <i className="fas fa-sr-envelopes"></i>Contact
+      </NavLink>
     </>
   );
 
@@ -116,6 +123,8 @@ const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+    
   );
 };
 
