@@ -107,6 +107,7 @@ function ProfilePage() {
             ))}
         </Col>
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
+        {profile?.specs && <Col className="p-3">{profile.specs}</Col>}
       </Row>
     </>
   );
