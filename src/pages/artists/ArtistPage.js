@@ -107,6 +107,7 @@ function ArtistPage() {
             ))}
         </Col>
         {artist?.content && <Col className="p-3">{artist.content}</Col>}
+        {artist?.specs && <Col className="p-3">{profile.specs}</Col>}
       </Row>
     </>
   );

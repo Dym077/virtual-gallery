@@ -49,6 +49,7 @@ Virtual Art Gallery is a social media website which allows for viual artists and
     + [Artist Profile](#artist-profile)
     + [Top Artists](#top-artists)
     + [Reviews](#reviews)
+    + [Navigation and Pagination](#navigation-and-pagination)
     + [CRUD functionality](#crud-functionality)
     + [Future improvements and features](#future-improvements-and-features)
       - [Short term future improvements](#short-term-future-improvements)
