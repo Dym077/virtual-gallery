@@ -14,7 +14,8 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-import ArtistPage from "./pages/profiles/ArtistPage";
+import ArtistPage from "./pages/artists/ArtistPage";
+import ArtistEditForm from "./pages/artists/ArtistEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -74,6 +75,11 @@ function App() {
             exact
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
+          />
+          <Route
+            exact
+            path="/artists/:id/edit"
+            render={() => <ArtistEditForm />}
           />
           <Route render={() => <p>OOPs! Wrong dimension!</p>} />
         </Switch>

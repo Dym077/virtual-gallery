@@ -10,7 +10,7 @@ import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import PopularProfiles from "./PopularProfiles";
+import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -93,21 +93,21 @@ function ArtistPage() {
             (artist?.following_id ? (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-                onClick={() => handleUnfollow(profile)}
+                onClick={() => handleUnfollow(artist)}
               >
                 unfollow
               </Button>
             ) : (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.Black}`}
-                onClick={() => handleFollow(profile)}
+                onClick={() => handleFollow(artist)}
               >
                 follow
               </Button>
             ))}
         </Col>
         {artist?.content && <Col className="p-3">{artist.content}</Col>}
-        {artist?.specs && <Col className="p-3">{profile.specs}</Col>}
+        {artist?.specs && <Col className="p-3">{artist.specs}</Col>}
       </Row>
     </>
   );
