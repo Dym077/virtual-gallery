@@ -86,9 +86,18 @@ The epics represent the main project parts that includes all related user storie
 
 ## Agile development methodology
 
+For this project I used a method called Agile to keep track of my progress. For this I sed a combination of issues divided into epics and user stories.
+
+The epics describe the most crucial features for the project and they have also been rated accordning to importance, with the most important epics being labeled with a milestone called "priority one". 
+
+The user stories are all related to the epics and have themselves been divided into priority, using the MoSCoW method. This means that the most important features have the label "must-have", a less important but still important feature has the "should-have"-label, an even less important but nice-to-have feature has the "could-have"- label and a feature that has little to no impact on the project will be labeled with a "won't-have"- label.
+
 ## Planning
 
 ### Mockups
+
+Initially I sketched wireframes on paper and later I made more detailed ones in Balsamiq to get an overview over the features which had the "must-have"- label assigned to them. This app was developed with the "mobile first" approach, which means it is highly accessible on a mobile device. 
+
 #### Mobile wireframes
 
 * Signup and signin page
@@ -170,6 +179,8 @@ The epics represent the main project parts that includes all related user storie
 </details>
 
 ### Data models
+
+Before the building of the front end part of this project, the data models were planned for the back end. The documentation for these models can be found here: [Virtual Art Gallery API](https://github.com/Dym077/drf-api02)
 
 ## Design
 
