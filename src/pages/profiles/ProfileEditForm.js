@@ -28,10 +28,9 @@ const ProfileEditForm = () => {
   const [profileData, setProfileData] = useState({
     name: "",
     content: "",
-    specs: "",
     image: "",
   });
-  const { name, content, specs, image } = profileData;
+  const { name, content, image } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -40,8 +39,8 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, specs, image } = data;
-          setProfileData({ name, content, specs, image });
+          const { name, content, image } = data;
+          setProfileData({ name, content, image });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -111,21 +110,7 @@ const ProfileEditForm = () => {
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
         save
       </Button>
-      <Form.Group>
-        <Form.Label>Techniques</Form.Label>
-        <Form.Control
-          as="textarea"
-          value={specs}
-          onChange={handleChange}
-          name="specs"
-          rows={2}
-        />
-      </Form.Group>
-      {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+      
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
