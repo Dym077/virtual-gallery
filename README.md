@@ -186,7 +186,29 @@ Before the building of the front end part of this project, the data models were 
 
 ### Colours
 
+To maintain a highly accessible user interface, the choice of colours are as follows. A brighter background provides a
+great contrast to the darker letters and icons on the site. The user experience should be a site with easy access to all features and without any clutter.  
+
+| Colour                                                                   | 
+|--------------------------------------------------------------------------|------------------|
+| #2142b2                              |           |
+| #ffffff |           |
+| #242a3d                                  |           |
+| aliceblue                                          |           |
+| #ff2ec6                                        |           |
+| #c1c1c5                                      |           |
+| #00d1ff                               |           |
+| #A6ACB5
+| #6E7174
+| #dadadf
+| #f85032
+| #cfced3
+| #f0f1f9
+| #7177a1
+| #ff9254
+
 ### Fonts
+Classic fonts were used for this project. For the main text on the site, I used initially "Lucida Handwriting", "Brush Script MT" and when they are not available - sans-serif. Lucida Handwriting has an elegant and classic feel to it, which suits the theme of the project and the overall design well. However it has a thin look to it, which made me consider a font with a more bold style.
 
 ## Features
 
