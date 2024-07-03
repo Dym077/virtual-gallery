@@ -1,20 +1,10 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import signuphero from "../../assets/images/hero2.jpg";
-
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-
-import {
-  Form,
-  Button,
-  Image,
-  Col,
-  Row,
-  Container,
-  Alert,
-} from "react-bootstrap";
+import { Form, Button, Image, Col, Row, Container, Alert, Dropdown } from "react-bootstrap";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -24,16 +14,25 @@ const SignUpForm = () => {
     username: "",
     password1: "",
     password2: "",
+    userType: "regular" // default user type
   });
-  const { username, password1, password2 } = signUpData;
+  const { username, password1, password2, userType } = signUpData;
 
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
+  
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
       [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleUserTypeChange = (type) => {
+    setSignUpData({
+      ...signUpData,
+      userType: type,
     });
   };
 
@@ -51,11 +50,11 @@ const SignUpForm = () => {
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign up</h1>
+          <h1 className={styles.Header}>Sign Up</h1>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">username</Form.Label>
+              <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="text"
@@ -89,11 +88,11 @@ const SignUpForm = () => {
             ))}
 
             <Form.Group controlId="password2">
-              <Form.Label className="d-none">Confirm password</Form.Label>
+              <Form.Label className="d-none">Confirm Password</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="password"
-                placeholder="Confirm password"
+                placeholder="Confirm Password"
                 name="password2"
                 value={password2}
                 onChange={handleChange}
@@ -105,11 +104,25 @@ const SignUpForm = () => {
               </Alert>
             ))}
 
+            <Form.Group controlId="userType">
+              <Form.Label>User Type</Form.Label>
+              <Dropdown onSelect={(eventKey) => handleUserTypeChange(eventKey)}>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                  {userType === "artist" ? "Artist" : "Regular User"}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item eventKey="regular">Regular User</Dropdown.Item>
+                  <Dropdown.Item eventKey="artist">Artist</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </Form.Group>
+
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
               type="submit"
             >
-              Sign up
+              Sign Up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">
@@ -120,7 +133,7 @@ const SignUpForm = () => {
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
-            Already joined? <span>Sign in</span>
+            Already joined? <span>Sign In</span>
           </Link>
         </Container>
       </Col>
