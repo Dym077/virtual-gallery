@@ -105,7 +105,7 @@ const SignUpForm = () => {
             ))}
 
             <Form.Group controlId="userType">
-              <Form.Label>User Type</Form.Label>
+              <Form.Label>I am</Form.Label>
               <Dropdown onSelect={(eventKey) => handleUserTypeChange(eventKey)}>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                   {userType === "artist" ? "Artist" : "Regular User"}
