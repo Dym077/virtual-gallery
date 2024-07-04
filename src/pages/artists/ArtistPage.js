@@ -74,7 +74,7 @@ function ArtistPage() {
           <h3 className="m-2">{artist?.owner}</h3>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
-              <div>{artist.posts_count}</div>
+              <div>{artist?.posts_count}</div>
               <div>posts</div>
             </Col>
             <Col xs={3} className="my-2">
