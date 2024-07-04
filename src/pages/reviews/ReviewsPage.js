@@ -54,7 +54,7 @@ const ReviewsPage = ({ message }) => {
   return (
     <Row className="h-100 d-flex justify-content-center">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p className="text-center">Most followed profiles.</p>
+        <p className="text-center">Top artists.</p>
         <PopularProfiles />
 
         <Artist {...artistData} isProfilePage={false} />

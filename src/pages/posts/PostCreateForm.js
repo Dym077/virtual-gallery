@@ -28,8 +28,11 @@ function PostCreateForm() {
     title: "",
     content: "",
     image: "",
+    category: "",
+    location: "",
+    notes: "",
   });
-  const { title, content, image } = postData;
+  const { title, content, image, category, location, notes } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -58,6 +61,9 @@ function PostCreateForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
+    formData.append("category", category);
+    formData.append("location", location);
+    formData.append("notes", notes);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -88,6 +94,21 @@ function PostCreateForm() {
       ))}
 
       <Form.Group>
+        <Form.Label>Category</Form.Label>
+        <Form.Control
+          type="text"
+          name="category"
+          value={category}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
           as="textarea"
@@ -98,6 +119,34 @@ function PostCreateForm() {
         />
       </Form.Group>
       {errors?.content?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label>Location</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label>Notes</Form.Label>
+        <Form.Control
+          type="text"
+          name="notes"
+          value={notes}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
