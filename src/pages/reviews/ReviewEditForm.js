@@ -6,9 +6,9 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
 function ReviewEditForm(props) {
-  const { id, content, setShowEditForm, setReviews } = props;
+  const { id, review, setShowEditForm, setReviews } = props;
 
-  const [formContent, setFormContent] = useState(content);
+  const [formContent, setFormContent] = useState(review);
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
@@ -18,7 +18,7 @@ function ReviewEditForm(props) {
     event.preventDefault();
     try {
       await axiosRes.put(`/reviews/${id}/`, {
-        content: formContent.trim(),
+        review: formContent.trim(),
       });
       setReviews((prevReviews) => ({
         ...prevReviews,
@@ -26,7 +26,7 @@ function ReviewEditForm(props) {
           return review.id === id
             ? {
                 ...review,
-                content: formContent.trim(),
+                review: formContent.trim(),
                 updated_at: "now",
               }
             : review;
@@ -59,7 +59,7 @@ function ReviewEditForm(props) {
         </button>
         <button
           className={styles.Button}
-          disabled={!content.trim()}
+          disabled={!review.trim()}
           type="submit"
         >
           update

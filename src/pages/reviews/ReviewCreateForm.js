@@ -10,7 +10,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 function ReviewCreateForm(props) {
   const { post, setPost, setReviews, profileImage, artist_id } = props;
-  const [content, setContent] = useState("");
+  const [review, setContent] = useState("");
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -20,7 +20,7 @@ function ReviewCreateForm(props) {
     event.preventDefault();
     try {
       const { data } = await axiosRes.post("/reviews/", {
-        content,
+        review,
         post,
       });
       setReviews((prevReviews) => ({
@@ -50,9 +50,9 @@ function ReviewCreateForm(props) {
           </Link>
           <Form.Control
             className={styles.Form}
-            placeholder="new review..."
+            placeholder="your review..."
             as="textarea"
-            value={content}
+            value={review}
             onChange={handleChange}
             rows={2}
           />
@@ -60,7 +60,7 @@ function ReviewCreateForm(props) {
       </Form.Group>
       <button
         className={`${styles.Button} btn d-block ml-auto`}
-        disabled={!content.trim()}
+        disabled={!review.trim()}
         type="submit"
       >
         publish

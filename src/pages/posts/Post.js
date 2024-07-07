@@ -139,7 +139,7 @@ const Post = (props) => {
           {comments_count}
         </div>
         <Link to={`/posts/${id}`}>
-        <script src="https://kit.fontawesome.com/30b1910aa3.js" crossOrigin="anonymous"></script><i class="fa-solid fa-star" />
+        <i class="far fa-comments" />
           </Link>
           {reviews_count}
       </Card.Body>
