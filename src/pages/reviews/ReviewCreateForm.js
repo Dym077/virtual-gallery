@@ -22,9 +22,6 @@ function ReviewCreateForm(props) {
       const { data } = await axiosRes.post("/reviews/", {
         content,
         post,
-        rating,
-        title,
-        tags,
       });
       setReviews((prevReviews) => ({
         ...prevReviews,
