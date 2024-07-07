@@ -22,6 +22,9 @@ function ReviewCreateForm(props) {
       const { data } = await axiosRes.post("/reviews/", {
         content,
         post,
+        rating,
+        title,
+        tags,
       });
       setReviews((prevReviews) => ({
         ...prevReviews,
@@ -63,7 +66,7 @@ function ReviewCreateForm(props) {
         disabled={!content.trim()}
         type="submit"
       >
-        submit
+        publish
       </button>
     </Form>
   );
