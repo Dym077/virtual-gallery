@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
+import styles from "../../styles/ReviewCreateEditForm.module.css";
 
 function ReviewEditForm(props) {
-  const { id, review, setShowEditForm, setReviews } = props;
+  const { id, content, setShowEditForm, setReviews } = props;
 
-  const [formContent, setFormContent] = useState(review);
+  const [formContent, setFormContent] = useState(content);
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
@@ -29,7 +29,7 @@ function ReviewEditForm(props) {
                 review: formContent.trim(),
                 updated_at: "now",
               }
-            : review;
+            : content;
         }),
       }));
       setShowEditForm(false);
@@ -59,7 +59,7 @@ function ReviewEditForm(props) {
         </button>
         <button
           className={styles.Button}
-          disabled={!review.trim()}
+          disabled={!content.trim()}
           type="submit"
         >
           update

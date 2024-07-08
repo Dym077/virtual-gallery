@@ -13,7 +13,6 @@ const Post = (props) => {
     owner,
     profile_id,
     profile_image,
-    comments_count,
     reviews_count,
     likes_count,
     like_id,
@@ -28,7 +27,6 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-  console.log('comments_count', comments_count)
   console.log('reviews_count', reviews_count)
   
   const currentUser = useCurrentUser();
@@ -136,12 +134,8 @@ const Post = (props) => {
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
-          {comments_count}
-        </div>
-        <Link to={`/posts/${id}`}>
-        <i class="far fa-comments" />
-          </Link>
           {reviews_count}
+        </div>
       </Card.Body>
     </Card>
   );

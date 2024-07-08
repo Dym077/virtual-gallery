@@ -8,10 +8,8 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-import Comment from "../comments/Comment";
 import Review from "../reviews/Review";
 
-import CommentCreateForm from "../comments/CommentCreateForm";
 import ReviewCreateForm from "../reviews/ReviewCreateForm.js";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -25,19 +23,19 @@ function PostPage() {
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
-  const [comments, setComments] = useState({ results: [] });
   const [reviews, setReviews] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }, { data: comments}, { data: reviews}] = await Promise.all([
-          axiosReq.get(`/posts/${id}`),  /* To route artists posts, should there be an artist ID as well?  */
+        const [{ data: post }, { data: reviews }] = await Promise.all([
+          axiosReq.get(
+            `/posts/${id}`
+          ) /* To route artists posts, should there be an artist ID as well?  */,
           axiosReq.get(`/comments/?post=${id}`),
           axiosReq.get(`/reviews/?post=${id}`),
         ]);
         setPost({ results: [post] });
-        setComments(comments);
         setReviews(reviews);
       } catch (err) {
         console.log(err);
@@ -51,40 +49,9 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={appStyles.Content}> {/* Form for the comments section */}
-          {currentUser ? (
-            <CommentCreateForm
-              profile_id={currentUser.profile_id}
-              profileImage={profile_image}
-              post={id}
-              setPost={setPost}
-              setComments={setComments}
-            />
-          ) : comments.results.length ? (
-            "Comments"
-          ) : null}
-          {comments.results.length ? (
-            <InfiniteScroll
-              children={comments.results.map((comment) => (
-                <Comment
-                  key={comment.id}
-                  {...comment}
-                  setPost={setPost}
-                  setComments={setComments}
-                />
-              ))}
-              dataLength={comments.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!comments.next}
-              next={() => fetchMoreData(comments, setComments)}
-            />
-          ) : currentUser ? (
-            <span>Break the silence, be the first to comment!</span>
-          ) : (
-            <span>Nobody has commented yet.</span>
-          )}
-        </Container> 
-        <Container className={appStyles.Content}> {/* Form for the reviews section */}
+        <Container className={appStyles.Content}>
+          {" "}
+          {/* Form for the reviews section */}
           {currentUser ? (
             <ReviewCreateForm
               profile_id={currentUser.profile_id}
@@ -112,11 +79,13 @@ function PostPage() {
               next={() => fetchMoreData(reviews, setReviews)}
             />
           ) : currentUser ? (
-            <span><b>Write a review on this artwork</b></span>
+            <span>
+              <b>Write a review on this artwork</b>
+            </span>
           ) : (
             <span>No recent reviews.</span>
           )}
-        </Container>  
+        </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />

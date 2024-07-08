@@ -16,6 +16,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ArtistPage from "./pages/artists/ArtistPage";
 import ArtistEditForm from "./pages/artists/ArtistEditForm";
+import NotFound from "./components/NotFound";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -81,7 +82,8 @@ function App() {
             path="/artists/:id/edit"
             render={() => <ArtistEditForm />}
           />
-          <Route render={() => <p>OOPs! Wrong dimension!</p>} />
+
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
