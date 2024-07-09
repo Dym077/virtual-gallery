@@ -31,10 +31,10 @@ function PostPage() {
         const [{ data: post }, { data: reviews }] = await Promise.all([
           axiosReq.get(
             `/posts/${id}`
-          ) /* To route artists posts, should there be an artist ID as well?  */,
-          axiosReq.get(`/comments/?post=${id}`),
+          ),
           axiosReq.get(`/reviews/?post=${id}`),
         ]);
+        console.log({ id })
         setPost({ results: [post] });
         setReviews(reviews);
       } catch (err) {
