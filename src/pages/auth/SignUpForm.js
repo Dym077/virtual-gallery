@@ -11,7 +11,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
-import Dropdown from "react-bootstrap/Dropdown";
+
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -21,9 +21,8 @@ const SignUpForm = () => {
     username: "",
     password1: "",
     password2: "",
-    userType: "regular" // default user type
   });
-  const { username, password1, password2, userType } = signUpData;
+  const { username, password1, password2 } = signUpData;
 
   const [errors, setErrors] = useState({});
 
@@ -33,13 +32,6 @@ const SignUpForm = () => {
     setSignUpData({
       ...signUpData,
       [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleUserTypeChange = (type) => {
-    setSignUpData({
-      ...signUpData,
-      userType: "artist"
     });
   };
 
@@ -110,20 +102,6 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-
-            <Form.Group controlId="userType">
-              <Form.Label>I am</Form.Label>
-              <Dropdown onSelect={(eventKey) => handleUserTypeChange(eventKey)}>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  {userType === "artist" ? "Artist" : "Regular User"}
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item eventKey="regular">Regular User</Dropdown.Item>
-                  <Dropdown.Item eventKey="artist">Artist</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </Form.Group>
 
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
