@@ -63,7 +63,7 @@ function ReviewCreateForm(props) {
         disabled={!content.trim()}
         type="submit"
       >
-        submit
+        publish
       </button>
     </Form>
   );
