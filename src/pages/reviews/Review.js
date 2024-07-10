@@ -86,7 +86,6 @@ const Review = (props) => {
         )}
       </Media>
     </>
-    /* Add som kind of rating system also */
   );
 };
 
