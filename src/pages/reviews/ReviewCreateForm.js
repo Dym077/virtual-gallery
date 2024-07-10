@@ -63,6 +63,7 @@ function ReviewCreateForm(props) {
       <Form.Group>
         <Form.Label><b>Title</b></Form.Label>
         <Form.Control // This is the field for the title of the review
+          placeholder="give your review a title.."
           type="text"
           name="title"
           value={title}
@@ -97,6 +98,7 @@ function ReviewCreateForm(props) {
       <FormGroup>
         <Form.Label><b>Tags</b></Form.Label>
         <Form.Control // Here's where tags will be added
+          placeholder="tag your review e.g #acrylic, #photography, #sculpture etc.."
           type="text"
           name="tags"
           value={tags}

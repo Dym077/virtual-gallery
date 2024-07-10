@@ -15,7 +15,10 @@ const Review = (props) => {
     profile_image,
     owner,
     updated_at,
+    title,
     content,
+    rating,
+    tags,
     id,
     setPost,
     setReviews,
@@ -59,12 +62,20 @@ const Review = (props) => {
               id={id}
               profile_id={profile_id}
               content={content}
+              title={title}
+              rating={rating}
+              tags={tags}
               profileImage={profile_image}
               setReviews={setReviews}
               setShowEditForm={setShowEditForm}
             />
           ) : (
+            <>
+            <p>{title}</p>
             <p>{content}</p>
+            <p>{rating}</p>
+            <p>{tags}</p>
+            </>
           )}
         </Media.Body>
         {is_owner && !showEditForm && (
