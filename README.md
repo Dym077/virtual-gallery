@@ -199,6 +199,7 @@ great contrast to the darker letters and icons on the site. The user experience 
 | #f0f1f9
 | #7177a1
 | #ff9254
+| #ff00ca
 
 ### Fonts
 Classic fonts were used for this project. For the main text on the site, I used initially "Lucida Handwriting", "Brush Script MT" and when they are not available - sans-serif. Lucida Handwriting has an elegant and classic feel to it, which suits the theme of the project and the overall design well. However it has a thin look to it, which made me consider a font with a more bold style.
@@ -225,11 +226,19 @@ This is the page the user will be directed to after signing up or signing in. It
 
 
 ### Future improvements and features
+Due to time constraints, I had to downscale the project quite a bit, and move an EPIC called Artists to the backlog.
+This will probably be a future feature, when a new ser will be able to sign up as a regular user or as an artist.
+Looking at the user stories, these should probably e considered "could-haves" and not "must-haves".
 
 #### Short term future improvements
+- As an artist, the user should acquire some exclusive features, such as able to receive reviews on their work and chat with 
+other user. As for now, all users can upload artwork and be able to receive reviews on their work
+- Reviews should be written exclusively for artists and on a dedicated Reviewspage. Instead of a classic numeric rating, the users should be able to rate the artwork with symbols or icons instead.
+- Implement a contact form where users can get in contact with an artist to get more information about their work.
+- Implement a contact form where user can contact the site administrator.
 
 #### Long term future features
-
+- A feature where users can order artwork from their favourite artists could be implemented in a future iteration of this project.
 
 ## Frameworks, libraries and dependencies
 
