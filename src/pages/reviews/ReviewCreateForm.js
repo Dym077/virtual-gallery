@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import Alert from "react-bootstrap/Alert";
 
 import styles from "../../styles/ReviewCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
@@ -12,13 +12,12 @@ import { FormGroup } from "react-bootstrap";
 function ReviewCreateForm(props) {
   const { post, setPost, setReviews, profileImage, profile_id } = props;
   
-  
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState("");
   const [tags, setTags] = useState("");
+  const [errors, setErrors] = useState({});
 
-  // if statements to handle fields in form
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === "content") setContent(value);
@@ -29,6 +28,16 @@ function ReviewCreateForm(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const newErrors = {};
+    if (!title.trim()) newErrors.title = ["Title is required."];
+    if (!content.trim()) newErrors.content = ["Content is required."];
+    if (!rating.trim()) newErrors.rating = ["Rating is required."];
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     try {
       const { data } = await axiosRes.post("/reviews/", {
         content,
@@ -53,8 +62,12 @@ function ReviewCreateForm(props) {
       setTitle("");
       setRating("");
       setTags("");
+      setErrors({});
     } catch (err) {
       console.log(err);
+      if (err.response?.status !== 401) { // If form is not properly filled in, this should trigger an error response
+        setErrors(err.response?.data);
+      }
     }
   };
 
@@ -62,20 +75,24 @@ function ReviewCreateForm(props) {
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
         <Form.Label><b>Title *</b></Form.Label>
-        <Form.Control // This is the field for the title of the review
-          placeholder="give your review a title.."
+        <Form.Control
           type="text"
           name="title"
           value={title}
           onChange={handleChange}
         />
+        {errors?.title?.map((message, idx) => ( // These messages should alert the user
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form.Group>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profileImage} />
           </Link>
-          <Form.Control // The actual review form
+          <Form.Control
             className={styles.Form}
             placeholder="your review..."
             as="textarea"
@@ -84,20 +101,30 @@ function ReviewCreateForm(props) {
             onChange={handleChange}
             rows={2}
           />
-        </InputGroup>
+        </InputGroup>  
+        {errors?.content?.map((message, idx) => ( // These messages should alert the user
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form.Group>
       <FormGroup>
-        <Form.Label><b>Rating</b></Form.Label>
+        <Form.Label><b>Rating *</b></Form.Label>
         <Form.Control
           type="number"
           name="rating"
           value={rating}
           onChange={handleChange}
         />
+        {errors?.rating?.map((message, idx) => ( // These messages should alert the user
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
       </FormGroup>
       <FormGroup>
         <Form.Label><b>Tags</b></Form.Label>
-        <Form.Control // Here's where tags will be added
+        <Form.Control
           placeholder="tag your review e.g #acrylic, #photography, #sculpture etc.."
           type="text"
           name="tags"
@@ -107,7 +134,7 @@ function ReviewCreateForm(props) {
       </FormGroup>
       <button
         className={`${styles.Button} btn d-block ml-auto`}
-        disabled={!content.trim()}
+        disabled={!content.trim() || !title.trim() || !rating.trim()}
         type="submit"
       >
         publish
