@@ -61,7 +61,7 @@ function ReviewCreateForm(props) {
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
-        <Form.Label><b>Title</b></Form.Label>
+        <Form.Label><b>Title *</b></Form.Label>
         <Form.Control // This is the field for the title of the review
           placeholder="give your review a title.."
           type="text"

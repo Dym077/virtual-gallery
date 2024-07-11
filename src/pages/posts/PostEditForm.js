@@ -36,9 +36,12 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, content, image, category, location, notes, is_owner } = data;
+        const { title, content, image, category, location, notes, is_owner } =
+          data;
 
-        is_owner ? setPostData({ title, content, image, category, location, notes }) : history.push("/");
+        is_owner
+          ? setPostData({ title, content, image, category, location, notes })
+          : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -92,7 +95,7 @@ function PostEditForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Title</Form.Label>
+        <Form.Label>Title *</Form.Label>
         <Form.Control
           type="text"
           name="title"
@@ -106,7 +109,7 @@ function PostEditForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label>Category</Form.Label>
+        <Form.Label>Category *</Form.Label>
         <Form.Control
           type="text"
           name="category"
@@ -144,11 +147,6 @@ function PostEditForm() {
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
       <Form.Group>
         <Form.Label>Notes</Form.Label>
         <Form.Control
@@ -158,11 +156,6 @@ function PostEditForm() {
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
