@@ -200,6 +200,7 @@ great contrast to the darker letters and icons on the site. The user experience 
 | #7177a1
 | #ff9254
 | #ff00ca
+| #22adaa
 
 ### Fonts
 Classic fonts were used for this project. For the main text on the site, I used initially "Lucida Handwriting", "Brush Script MT" and when they are not available - sans-serif. Lucida Handwriting has an elegant and classic feel to it, which suits the theme of the project and the overall design well. However it has a thin look to it, which made me consider a font with a more bold style.

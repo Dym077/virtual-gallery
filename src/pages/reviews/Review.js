@@ -71,9 +71,9 @@ const Review = (props) => {
             />
           ) : (
             <>
-            <p>{title}</p>
+            <p><u>{title}</u></p>
             <p>{content}</p>
-            <p>{rating}</p>
+            <p>Rated:<b>{rating}</b></p>
             <p>{tags}</p>
             </>
           )}
