@@ -111,6 +111,7 @@ function ReviewCreateForm(props) {
       <FormGroup>
         <Form.Label><b>Rating *</b></Form.Label>
         <Form.Control
+          placeholder="enter a number 1 - 5"
           type="number"
           name="rating"
           value={rating}
