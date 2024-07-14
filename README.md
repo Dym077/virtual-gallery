@@ -50,6 +50,7 @@ The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp
     + [Follow Profiles](#follow-profiles)
     + [Top Artists](#top-artists)
     + [Navigation and Pagination](#navigation-and-pagination)
+    + [Re-use of components](#re-use-of-components)
     + [CRUD functionality](#crud-functionality)
     + [Future improvements and features](#future-improvements-and-features)
       - [Short term future improvements](#short-term-future-improvements)
@@ -207,7 +208,7 @@ great contrast to the darker letters and icons on the site. The user experience 
 
 ### Fonts
 Classic fonts were used for this project. For the main text on the site, I used initially "Lucida Handwriting", "Brush Script MT" and when they are not available - sans-serif. Lucida Handwriting has an elegant and classic feel to it, which suits the theme of the project and the overall design well. However it has a thin look to it, which made me consider a font with a more bold style.
-Verdana, Geneva, Tahoma, sans-serif
+Other fonts were less prominent, but well known fonts, such as Verdana, Geneva, Tahoma, sans-serif, which were used for the placeholder text in the searchbar for "Find art".
 
 ## Features
 
@@ -220,12 +221,15 @@ The menu and the feed are visible on the page.
 
 ### Sign-up form
 With the sign-up form, a new user can provide a unique username and a password. The user will be asked to confirm the password and can then use the sign-in form to access the page.
+![Signup](documentation/signup.png)
 
 ### Sign-in form
 A returning user can use the sign-in form to access the page. By entering the username and the password, the user will be able to login.
+![Signin](documentation/signin.png)
 
 ### Home page
-This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user. 
+This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user.
+![Homepage](documentation/homepage)
 
 ### Upload Artwork
 ### Edit Artwork
@@ -242,6 +246,18 @@ The function to let a user review personal artwork might seem a little strange, 
 ### Follow Profiles
 ### Top Artists
 ### Navigation and Pagination
+### Re-use of components
+#### Spinner.js
+This components was used to render the loading spinner all across the project. When th content on the homepage, the feed of posts or top artists are loaded, the spinner will be visible
+#### Avatar.js
+This asset is used to display the users profile image, both the default and custom image. This avatar is visible next to the post, review and on the profile page.
+#### MoreDropDown.js
+Another frequently used asset, which allows for a user to click a dropdown icon and a menu appears. It's used as an exclusive MoreDropdown.js app and re-used in the Post.js app, the ProfilePage.js and in the Review.js app.
+#### NavBar.js
+Used for easier navigation across the app, allowing the user to navigate to any of the features from the navbar.
+#### NotFound.js
+If a request is made which is not valid the NotFound component will be returned.
+
 
 ### CRUD functionality
 Virtual Art Gallery makes use of full Create, Read, Update and Delete functionality, via the UI implemented in React and the Django Rest Framework API.
