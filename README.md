@@ -15,6 +15,8 @@ Virtual Art Gallery is a social media website which allows for viual artists and
 3) Provide a way for artists and other users to interact.
 4) Let user review and provide feedback on published artwork.
 
+The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp.com/)
+
 ## Table of contents
 - [](#)
   * [Project Goals](#project-goals)
@@ -35,20 +37,18 @@ Virtual Art Gallery is a social media website which allows for viual artists and
     + [Sign-up form](#sign-up-form)
     + [Sign-in form](#sign-in-form)
     + [Home Page](#home-page)
-    + [Upload Posts](#upload-posts)
-    + [Edit Posts](#edit-posts)
-    + [Delete Posts](#delete-posts)
-    + [Like Posts](#like-posts)
-    + [Comments Form](#comments-form)
-    + [Edit Comments](#edit-comments)
-    + [Delete Comments](#delete-comments)
+    + [Upload Artwork](#upload-artwork)
+    + [Edit Artwork](#edit-artwork)
+    + [Delete Artwork](#delete-artwork)
+    + [Like Artwork](#like-artwork)
+    + [Reviews Form](#reviews-form)
+    + [Edit Reviews](#edit-comments)
+    + [Delete Reviews](#delete-comments)
     + [Profile Page](#profile-page)
     + [Profile Image](#profile-image)
     + [Edit Profile](#edit-profile)
     + [Follow Profiles](#follow-profiles)
-    + [Artist Profile](#artist-profile)
     + [Top Artists](#top-artists)
-    + [Reviews](#reviews)
     + [Navigation and Pagination](#navigation-and-pagination)
     + [CRUD functionality](#crud-functionality)
     + [Future improvements and features](#future-improvements-and-features)
@@ -83,6 +83,8 @@ All user stories and epics are listed in full in the [README for the API ](https
 The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "done" column.
 
 ### User stories
+All the user stories have their related EPICs and are also rated accoedning to their 
+importance, with the "must-have" being the most important and the "should have" being slinghtly less important, the "could-have" being a nice feature that could be implemented if the deadline allows it and finally the "won't have" which will not be implemented. A full list of the user stories and related EPICs can be found in the [README.md for the drf-api](https://github.com/Dym077/drf-api02) 
 
 ## Agile development methodology
 
@@ -225,7 +227,29 @@ A returning user can use the sign-in form to access the page. By entering the us
 ### Home page
 This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user. 
 
+### Upload Artwork
+### Edit Artwork
+### Delete Artwork
+### Like Artwork
+### Reviews Form
+The function to let a user review personal artwork might seem a little strange, but it's actually a great way for an artist to give feedback on the review itself, as well as commmunicate with other users.
+
+### Edit Reviews
+### Delete Reviews
+### Profile Page
+### Profile Image
+### Edit Profile
+### Follow Profiles
+### Top Artists
+### Navigation and Pagination
+
 ### CRUD functionality
+Virtual Art Gallery makes use of full Create, Read, Update and Delete functionality, via the UI implemented in React and the Django Rest Framework API.
+
+- Create - A new user can create a unique user profile and also create posts by uploading artwork to the site. An authenticated user can also like other artists work.
+- Read - An authenticated user can view other user's profiles and artwork as well as the personal posts and profile page. An authenticated user can also view reviews on other users' artwork as well as other users' reviews on personal posts.
+- Update - authenticated users can update their profile image, username and password, and edit and save details and specs on their previously posted artwork. An authenticated user can also udate their reviews and likes on other users posts/ artwork.
+- Delete - authenticated users can delete their previously posted artwork from the site, delete their reviews and likes on other artists work and also delete their profiles.
 
 
 ### Future improvements and features
@@ -279,9 +303,12 @@ other user. As for now, all users can upload artwork and be able to receive revi
 The DOM returns a NaN message when a user submits a comment on another user's post. The reason for this error is not to be found in the front end, but should be caused when the integer from the API isn't properly read by the DOM, believing it to be a string rather than an integer. The culprit was revealed to be the serializer in the Postserializer model for the backend API missed a comments_count field so the Post model was not annotated with comments_count field. Thanks to help from tutor support we were able to pinpoint this bug and fix it.
 
 ### Unresolved bugs
-![Bad Request](documentation/bad_request.png)
+- ![Bad Request](documentation/bad_request.png)
 One of the most frustrating bugs I encountered during development and testing of the API, was an axioserror which was related to the "reviews" model. When attempting to post a review from the ReviewCreateForm on selected artwork, the devtools console returned "AxiosError Bad Request" For some reason, the front end could not communicate at all with the API.
 The reason for this bug was in the front end of this project. Because there were only one field for the review implemented, and the API requires four fields, the digital handshake could not be executed properly. This bug is also mentioned in the readme for the API, but was actually caused in the front end. 
+
+- The tooltip which prompts the user to enter an integer between 1 & 5 in the rating field, for some reason doesn't show on the deployed version of this app.
+- [Rating](documentation/rating_integer.png)
  
 
 ## Deployment
@@ -303,6 +330,7 @@ Deployments to Heroku can be dome following theses steps:
 When deployment is complete, you will be given a link to the deployed site.
 
 ## Credits
+
 
 ### Code
 
