@@ -64,7 +64,7 @@ function ReviewCreateForm(props) {
       setTags("");
       setErrors({});
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) { // If form is not properly filled in, this should trigger an error response
         setErrors(err.response?.data);
       }

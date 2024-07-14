@@ -34,11 +34,11 @@ function PostPage() {
           ),
           axiosReq.get(`/reviews/?post=${id}`),
         ]);
-        console.log({ id })
+        // console.log({ id })
         setPost({ results: [post] });
         setReviews(reviews);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     handleMount();
