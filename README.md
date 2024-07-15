@@ -302,7 +302,7 @@ Virtual Art Gallery makes use of full Create, Read, Update and Delete functional
 - Create - A new user can create a unique user profile and also create posts by uploading artwork to the site. An authenticated user can also like other artists work.
 - Read - An authenticated user can view other user's profiles and artwork as well as the personal posts and profile page. An authenticated user can also view reviews on other users' artwork as well as other users' reviews on personal posts.
 - Update - authenticated users can update their profile image, username and password, and edit and save details and specs on their previously posted artwork. An authenticated user can also udate their reviews and likes on other users posts/ artwork.
-- Delete - authenticated users can delete their previously posted artwork from the site, delete their reviews and likes on other artists work and also delete their profiles.
+- Delete - authenticated users can delete their previously posted artwork from the site, delete their reviews and likes on other artists work.
 
 
 ### Future improvements and features
@@ -316,6 +316,11 @@ other user. As for now, all users can upload artwork and be able to receive revi
 - Reviews should be written exclusively for artists and on a dedicated Reviewspage. Instead of a classic numeric rating, the users should be able to rate the artwork with symbols or icons instead.
 - Implement a contact form where users can get in contact with an artist to get more information about their work.
 - Implement a contact form where user can contact the site administrator.
+- User should be able to delete their own profiles.
+- Users should get an alert when attempting to delete posts.
+- An artist should not have to rate personal artwork to add comments.
+- When users are followed and their artwork is being reviewed and/ or liked, they
+should be alerted.
 
 #### Long term future features
 - A feature where users can order artwork from their favourite artists could be implemented in a future iteration of this project.
@@ -339,6 +344,8 @@ other user. As for now, all users can upload artwork and be able to receive revi
 ## Testing
 
 ### Manual testing
+A series of manual tests were performed for each user story to be implemented for the project.The tests were performed on the deployed version of the site.
+A complete list of tests of all the functions in the app can be viewed [here](https://docs.google.com/spreadsheets/d/1AI-GBoQKm2L2NoHn1X_w7_F-2xDVtFN0cPtK2XwXiZQ/edit?gid=0#gid=0).
 
 
 ### Validator testing
