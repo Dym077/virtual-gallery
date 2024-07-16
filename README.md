@@ -1,8 +1,9 @@
 # Virtual Art Gallery
 
 <p align="center">
-    <img src=" " width=600>
+    <img src="documentation/amiresponsive.png" width=600>
 </p>
+
 <p align="center">
     Image generated using <a href="https://ui.dev/amiresponsive" target="_blank">https://ui.dev/amiresponsive</a>
 </p>
@@ -350,6 +351,8 @@ A complete list of tests of all the functions in the app can be viewed [here](ht
 
 ### Validator testing
 
+The page's responiveness was was validated using [Am I Responsive](https://ui.dev/amiresponsive?url=https://virtual-gallery-b30861137de1.herokuapp.com/)
+
 ### W3C CSS validator
 
 
@@ -359,16 +362,15 @@ A complete list of tests of all the functions in the app can be viewed [here](ht
 ### Lighthouse testing
 
 ### Resolved bugs
+- The tooltip which prompts the user to enter an integer between 1 & 5 in the rating field, for some reason didn't show on the deployed version of this app.
+- [Rating](documentation/rating_integer.png)
 
-The DOM returns a NaN message when a user submits a comment on another user's post. The reason for this error is not to be found in the front end, but should be caused when the integer from the API isn't properly read by the DOM, believing it to be a string rather than an integer. The culprit was revealed to be the serializer in the Postserializer model for the backend API missed a comments_count field so the Post model was not annotated with comments_count field. Thanks to help from tutor support we were able to pinpoint this bug and fix it.
+ - The DOM returns a NaN message when a user submits a comment on another user's post. The reason for this error is not to be found in the front end, but should be caused when the integer from the API isn't properly read by the DOM, believing it to be a string rather than an integer. The culprit was revealed to be the serializer in the Postserializer model for the backend API missed a comments_count field so the Post model was not annotated with comments_count field. Thanks to help from tutor support we were able to pinpoint this bug and fix it.
 
 ### Unresolved bugs
 - ![Bad Request](documentation/bad_request.png)
 One of the most frustrating bugs I encountered during development and testing of the API, was an axioserror which was related to the "reviews" model. When attempting to post a review from the ReviewCreateForm on selected artwork, the devtools console returned "AxiosError Bad Request" For some reason, the front end could not communicate at all with the API.
 The reason for this bug was in the front end of this project. Because there were only one field for the review implemented, and the API requires four fields, the digital handshake could not be executed properly. This bug is also mentioned in the readme for the API, but was actually caused in the front end. 
-
-- The tooltip which prompts the user to enter an integer between 1 & 5 in the rating field, for some reason doesn't show on the deployed version of this app.
-- [Rating](documentation/rating_integer.png)
  
 
 ## Deployment
