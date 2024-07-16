@@ -230,59 +230,62 @@ A returning user can use the sign-in form to access the page. By entering the us
 
 ### Home page
 This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user.
-![Homepage](documentation/homepage.png)
+![Homepage](documentation/laptop_home.png)
 
 ### Upload Artwork
 A user who is logged in can upload artwork, clicking on the mouse area in the navbar, saying "Upload your artwork" From here the user can choose an image and add specifications to it, such as a title, a description and optionally, a location and notes. After clicking the submit button, the artwork will be visible in the feed.
-![Upload artwork](documentation/upload_artwork.png)
+![Upload artwork](documentation/laptop_upload_art.png)
+![Upload artwork](documentation/laptop_upload_art_2.png)
 
 ### Edit Artwork
 A user will be able to edit the details on personal artwork by changing the content in the textfields and update the image to another. After clicking update, the new details and the image will be visible in the feed. 
-![Edit artwork](documentation/edit_artwork.png)
+![Edit artwork](documentation/laptop_edit_post.png)
+![Edit artwork](documentation/laptop_edit_post_2.png)
+![Edit artwork](documentation/laptop_edit_post_3.png)
 
 ### Delete Artwork
 A user can furthermore, choose to delete the uploaded artwork together with related details. After clicking the delete button, the image and all related info ill be erased.
-![Delete artwork](delete_artwork.png)
+![Delete artwork](documentation/laptop_delete_post.png)
 
 ### Like Artwork
 Any user who is logged in, can like other users' artwork by clicking on the heart-shaped icon next to the post. The heart will turn red and the post will be visible in the user's feed. If the same user clicks the heart con again, the like will
 disappear and the post will not be visible in the user's personal feed. 
-![Like artwork](documentation/like_artwork.png)
+![Like artwork](documentation/laptop_like_post.png)
 
 ### Reviews Form
 The reviews form is a function that lets users comment, give feedback and rate on other users' artwork. The user writing the review, can choose a title, add content in the textfield below and also put an integer between 1 & 5 in the rating field. Optionally, it's possible to add tags to the artwork as well.  
 The function to let a user review personal artwork, is actually a great way for an artist to give feedback on the review itself, as well as commmunicate with other users.
 When all required fields(marked with "*")fields are filled in, the user can click the publish button and the review will be visible under the posted artwork.
-![Reviews form](documentation/reviews_form.png)
+![Reviews form](documentation/laptop_write_review.png)
 ### Edit Reviews
 In addition a user can choose to edit the review in the same fashion that it's possible to edit profile details and details on artwork. By clicking the pencil icon the edit form will be visible. When all fields have been edited to satisfaction, the user can click the update button and the new content will be visible.
-![Edit reviews](documentation/edit_reviews.png)
+![Edit reviews](documentation/laptop_edit_review.png)
 ### Delete Reviews
 To delete a review, the user can instead of choosing the pencil icon choose the trashcan icon. After clicking on the delete button, the review will be completely removed. 
-![Delete Reviews](documentation/delete_reviews.png)
+![Delete Reviews](documentation/laptop_delete_review.png)
 ### Profile Page
 The profile page is exclusive to each user, and a user can choose to add a short biography, what styles of art might be of interest and also, if they are practicing art themselves, specify what techiques they are using.  When all fields have been filled in, the user can click the save button and all info will be added to the profile page. 
-![Profile page](documentation/profile_page.png)
+![Profile page](documentation/laptop_profile.png)
 ### Profile Image
 All users will be provided with a default profile image, which they can change at anytime. If the user clicks on the change image button, a window will open where the user can choose a new image. 
-![Profile_image](documentation/profile_image.png)
+![Profile_image](documentation/laptop_profile_image.png)
 ### Edit Profile
 The profile details can also be updated at anytime, as well as the profile image. When toggling the tree dots next to the avatar, the user can then edit the profile details and save them. 
-![Edit profile](documentation/edit_profile.png)
+![Edit profile](documentation/laptop_profile_edit.png)
 ### Change username and password
 Each user also has the ability to change credentials. When toggling the menu for 
 changing username and password, a new form will display where the user can choose a new username and password. After clicking save, the new credentials will be saved to the database. 
-![Change username and password](documentation/change_username_and_password.png)
+![Change username and password](documentation/laptop_change_username_and_password.png)
 ### Follow Profiles
-The follow function lets a user follow other usersand get instant access to their updates and newly published artwork. By clicking on the follow button, the user will get posts from the followed user in the personal feed. If a user wishes to unfollow the user, that's done by clicking the the button again.
-![Follow profiles](documentation/follow_profiles.png)
+The follow function lets a user follow other users and get instant access to their updates and newly published artwork. By clicking on the follow button, the user will get posts from the followed user in the personal feed. If a user wishes to unfollow the user, that's done by clicking the the button again.
+![Follow profiles](documentation/laptop_follow.png)
 ### Top Artists
 A function to display the most followed users on the page. In the column to the right under the heading "We are cool", the profiles which have the most followers are displayed. This list also offers the function to follow and unfollow profiles.
-![Top artists](documentation/top_artists.png)
+![Top artists](documentation/laptop_top_artists.png)
 
 ### Navigation
 All navigation is easily performed via the navbar at the top of the page. From there, the other pages can be accessed by an authenticated user. 
-![Navigation](documentation/navigation.png)
+![Navigation](documentation/laptop_navigation.png)
 ### Re-use of components
 #### Spinner.js
 This components was used to render the loading spinner all across the project. When th content on the homepage, the feed of posts or top artists are loaded, the spinner will be visible
@@ -321,6 +324,7 @@ other user. As for now, all users can upload artwork and be able to receive revi
 - An artist should not have to rate personal artwork to add comments.
 - When users are followed and their artwork is being reviewed and/ or liked, they
 should be alerted.
+- New default images for redular users vs artists.
 
 #### Long term future features
 - A feature where users can order artwork from their favourite artists could be implemented in a future iteration of this project.
