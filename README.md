@@ -19,14 +19,13 @@ Virtual Art Gallery is a social media website which allows for viual artists and
 The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp.com/)
 
 ## Table of contents
-- [](#)
+- [Virtual Art Gallery](#virtual-art-gallery)
   * [Project Goals](#project-goals)
   * [Table of contents](#table-of-contents)
-  * [User stories](#user-stories)
-    + [Epics](#epics)
-    + [User stories](#user-stories-1)
   * [Agile development methodology](#agile-development-methodology)
   * [Planning](#planning)
+    + [Epics](#epics)
+    + [User stories](#user-stories-1)
     + [Mockups](#mockups)
     + [Data models](#data-models)
   * [Design](#design)
@@ -61,8 +60,6 @@ The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp
     + [React-Router-DOM](#react-router-dom)
     + [ReactDOM](#reactdom)
     + [Axios](#axios)
-    + [React Bootstrap Icons](#react-bootstrap-icons)
-    + [Custom hooks](#custom-hooks)
   * [Testing](#testing)
     + [Manual testing](#manual-testing)
     + [Validator testing](#validator-testing)
@@ -78,32 +75,33 @@ The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp
     + [Media](#media)
   * [Acknowledgements](#acknowledgements)
 
-
-## User stories
-All user stories and epics are listed in full in the [README for the API ](https://github.com/Dym077/drf-api02)
-
-### Epics
-The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "done" column.
-
-### User stories
-All the user stories have their related EPICs and are also rated accoedning to their 
-importance, with the "must-have" being the most important and the "should have" being slinghtly less important, the "could-have" being a nice feature that could be implemented if the deadline allows it and finally the "won't have" which will not be implemented. A full list of the user stories and related EPICs can be found in the [README.md for the drf-api](https://github.com/Dym077/drf-api02) 
-
 ## Agile development methodology
 
-For this project I used a method called Agile to keep track of my progress. For this I sed a combination of issues divided into epics and user stories.
+For this project I used a method called Agile to keep track of my progress. For this I used a combination of issues divided into epics and user stories.
 
 The epics describe the most crucial features for the project and they have also been rated accordning to importance, with the most important epics being labeled with a milestone called "priority one". 
 
 The user stories are all related to the epics and have themselves been divided into priority, using the MoSCoW method. This means that the most important features have the label "must-have", a less important but still important feature has the "should-have"-label, an even less important but nice-to-have feature has the "could-have"- label and a feature that has little to no impact on the project will be labeled with a "won't-have"- label.
 
 ## Planning
+The importance of proper planning became very clear to me when developing a bigger project like this.
+GitHub provides powerful and comprehensive tools, such as a Kanban board and the possibility to add a
+group of issues to boards called projects. The issues were ordered into EPIC's and User Stories. Each EPIC has a smaller or bigger group of User Stories attached to it, and was provided with milestones and labels accordning to importance.
+
+### Epics
+The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "done" column.
+
+### User stories
+All the user stories have their related EPICs and are also rated accordning to their 
+importance, with the "must-have" being the most important and the "should have" being slinghtly less important, the "could-have" being a nice feature that could be implemented if the deadline allows it and finally the "won't have" which will not be implemented. A full list of the user stories and related EPICs can be found in the [README.md for the drf-api](https://github.com/Dym077/drf-api02) 
+
 
 ### Mockups
 
 Initially I sketched wireframes on paper and later I made more detailed ones in Balsamiq to get an overview over the features which had the "must-have"- label assigned to them. This app was developed with the "mobile first" approach, which means it is highly accessible on a mobile device. 
 
 #### Mobile wireframes
+As this is a "mobile first" app, I started with the wireframes for the mobile devices.
 
 * Signup and signin page
 
@@ -187,15 +185,15 @@ Before the building of the front end part of this project, the data models were 
 To maintain a highly accessible user interface, the choice of colours are as follows. A brighter background provides a
 great contrast to the darker letters and icons on the site. The user experience should be a site with easy access to all features and without any clutter.  
 
-| Colour                                                                   | 
+| Value        Colour   |            Used on                               |
 |--------------------------------------------------------------------------|------------------|
-| #2142b2                              |           |
-| #ffffff |           |
-| #242a3d                                  |           |
-| aliceblue                                          |           |
-| #ff2ec6                                        |           |
-| #c1c1c5                                      |           |
-| #00d1ff                               |           |
+| #2142b2   |           |
+| #ffffff   |           |
+| #242a3d   |           |
+| aliceblue |           |
+| #ff2ec6   |           |
+| #c1c1c5   |           |
+| #00d1ff   |           |
 | #A6ACB5
 | #6E7174
 | #dadadf
@@ -330,17 +328,22 @@ should be alerted.
 
 
 ### React-Router-DOM
-
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) This library give the ability of 'client side routing' for React web applications, and is used to implement basic routing in Virtual Art Gallery, such as implementing the links on the navbar, and register, sign-in and sign-out links.
 
 ### ReactDOM
+- [react-dom](https://www.npmjs.com/package/react-dom) React-dom can provide useful methods to manipulate the DOM outside the React package and render useful elements used in this application.
 
+### React-Bootstrap
+- [react-bootstrap](https://react-bootstrap.netlify.app/)
+This library was essential to provide the overall styling of the page, ranging from navbars, spinners 
+and buttons.
+ 
 ### Axios
+- [Axios](https://www.npmjs.com/package/axios) The Axios library is used for making a reliable connections between the front end and the back end API.
 
-### React Bootstrap Icons
-- [React Bootstrap Icons](https://www.npmjs.com/package/react-bootstrap-icons) 
-
-
-### Custom hooks
+### JWT Decode
+- [jwt-decode](https://www.npmjs.com/package/jwt-decode)
+This library was used to decode Base64URL encoded JSON web tokens.
 
 ## Testing
 
@@ -393,9 +396,15 @@ When deployment is complete, you will be given a link to the deployed site.
 
 ## Credits
 
-
 ### Code
+I did not rely heavily on external sources when building this project. I more or less stuck to the material provided by the educators and Code Institute's "Moments" walkthrough. However, I found these online sources useful to find solutions to errors and for general troubleshooting:
+* Stack Overflow [Handling Axios Errors](https://stackoverflow.com/questions/49967779/axios-handling-errors)
+
+* This documentation was built from a template, heavily inspired by [TribeHub React](https://github.com/andy-guttridge/tribehub_react/blob/main/README.md)
 
 ### Media
+Most of the styling and visual elements are relying on the React-Bootstrap library.
+Some additional cumponenents are custom elements which I designed myself.
+* The Virtual Art Gallery logotype and the default profile avatar were made using [Affinity Designer](https://affinity.serif.com/en-us/designer/)
 
 ## Acknowledgements
