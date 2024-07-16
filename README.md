@@ -186,26 +186,15 @@ Before the building of the front end part of this project, the data models were 
 To maintain a highly accessible user interface, the choice of colours are as follows. A brighter background provides a
 great contrast to the darker letters and icons on the site. The user experience should be a site with easy access to all features and without any clutter.  
 
-| Value        Colour   |            Used on                               |
+| Colour                                                                   | value            |
 |--------------------------------------------------------------------------|------------------|
-| #2142b2   |           |
-| #ffffff   |           |
-| #242a3d   |           |
-| aliceblue |           |
-| #ff2ec6   |           |
-| #c1c1c5   |           |
-| #00d1ff   |           |
-| #A6ACB5
-| #6E7174
-| #dadadf
-| #f85032
-| #cfced3
-| #f0f1f9
-| #7177a1
-| #ff9254
-| #ff00ca
-| #8bb8e2
-| #effb93;
+| Primary colour- used for profile and top artists                         | #effb93          |
+| Secondary - used for artwork feed                                        | #8bb8e2          |
+| Background - used for navigation bar                                     | #a6acb5          |
+| Element1 - used for like-heart                                           | #f85032          |
+| Element2 - used for logotype and follow button                           | #ff00ca          |
+| Element3 - used for edit and save buttons                                | #2142b2          |
+| Element4 - used for review publish button                                | #6a725a          |
 
 ### Fonts
 Classic fonts were used for this project. For the main text on the site, I used initially "Lucida Handwriting", "Brush Script MT" and when they are not available - sans-serif. Lucida Handwriting has an elegant and classic feel to it, which suits the theme of the project and the overall design well. However it has a thin look to it, which made me consider a font with a more bold style.
