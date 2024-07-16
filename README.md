@@ -32,6 +32,8 @@ The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp
     + [Colours](#colours)
     + [Fonts](#fonts)
   * [Features](#features)
+  * [Mobile Views](#mobile-views)
+  * [Desktop and Laptop Views](#desktop-and-laptop-views)
     + [Header](#header)
     + [Landing page](#landing-page)
     + [Sign-up form](#sign-up-form)
@@ -202,12 +204,66 @@ Other fonts were less prominent, but well known fonts, such as Verdana, Geneva, 
 
 ## Features
 
+### Mobile views
+
+<details>
+
+### Sign-up form
+With the sign-up form, a new user can provide a unique username and a password. The user will be asked to confirm the password and can then use the sign-in form to access the page.
+![Signup](documentation/mobile_signup.jpg)
+
+### Sign-in form
+A returning user can use the sign-in form to access the page. By entering the username and the password, the user will be able to login.
+![Signin](documentation/mobile_signin.jpg)
+
+### Home page
+This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user.
+
+![Homepage](documentation/mobile_home.jpg)
+
+### Upload Artwork
+A user who is logged in can upload artwork, clicking on the mouse area in the navbar, saying "Upload your artwork" From here the user can choose an image and add specifications to it, such as a title, a description and optionally, a location and notes. After clicking the submit button, the artwork will be visible in the feed.
+![Upload artwork](documentation/upload_art_mobile_1.jpg)
+![Upload artwork](documentation/upload_art_mobile_2.jpg)
+
+
+### Like Artwork
+Any user who is logged in, can like other users' artwork by clicking on the heart-shaped icon next to the post. The heart will turn red and the post will be visible in the user's feed. If the same user clicks the heart con again, the like will
+disappear and the post will not be visible in the user's personal feed. 
+![Like artwork](documentation/mobile_liked_feed.jpg)
+
+### Reviews Form
+The reviews form is a function that lets users comment, give feedback and rate on other users' artwork. The user writing the review, can choose a title, add content in the textfield below and also put an integer between 1 & 5 in the rating field. Optionally, it's possible to add tags to the artwork as well.  
+The function to let a user review personal artwork, is actually a great way for an artist to give feedback on the review itself, as well as commmunicate with other users.
+![Reviews form](documentation/mobile_write_review.jpg)
+When all required fields(marked with "*")fields are filled in, the user can click the publish button and the review will be visible under the posted artwork.
+![Reviews form2](documentation/mobile_review_published.jpg)
+
+### Edit Reviews
+In addition a user can choose to edit the review in the same fashion that it's possible to edit profile details and details on artwork. By clicking the pencil icon the edit form will be visible. When all fields have been edited to satisfaction, the user can click the update button and the new content will be visible.
+![Edit reviews](documentation/mobile_edit_review.jpg)
+
+### Profile Page
+The profile page is exclusive to each user, and a user can choose to add a short biography, what styles of art might be of interest and also, if they are practicing art themselves, specify what techiques they are using.  When all fields have been filled in, the user can click the save button and all info will be added to the profile page. 
+![Profile page](documentation/mobile_profile.jpg)
+
+### Edit Profile
+The profile details can also be updated at anytime, as well as the profile image. When toggling the tree dots next to the avatar, the user can then edit the profile details and save them. 
+![Edit profile](documentation/mobile_profile_edit.jpg)
+
+</details>
+
+### Desktop and Laptop views
+<details>
+
 ### Header
 The header contains the logotype and the navbar.
+![Navbar](documentation/laptop_header.png)
 
 ### Landing page
 The landing page is the first page the user will see when navigating to the site.
 The menu and the feed are visible on the page.
+![Home](documentation/desktop_landing_1.png)
 
 ### Sign-up form
 With the sign-up form, a new user can provide a unique username and a password. The user will be asked to confirm the password and can then use the sign-in form to access the page.
@@ -219,11 +275,15 @@ A returning user can use the sign-in form to access the page. By entering the us
 
 ### Home page
 This is the page the user will be directed to after signing up or signing in. It looks alot like the landing page, but all the features are available to the signed in user.
+
 ![Homepage](documentation/laptop_home.png)
 
 ### Upload Artwork
-A user who is logged in can upload artwork, clicking on the mouse area in the navbar, saying "Upload your artwork" From here the user can choose an image and add specifications to it, such as a title, a description and optionally, a location and notes. After clicking the submit button, the artwork will be visible in the feed.
+A user who is logged in can upload artwork, clicking on the mouse area in the navbar, saying "Upload your artwork" 
 ![Upload artwork](documentation/laptop_upload_art.png)
+
+From here the user can choose an image and add specifications to it, such as a title, a description and optionally, a location and notes. After clicking the submit button, the artwork will be visible in the feed.
+
 ![Upload artwork](documentation/laptop_upload_art_2.png)
 
 ### Edit Artwork
@@ -275,6 +335,9 @@ A function to display the most followed users on the page. In the column to the 
 ### Navigation
 All navigation is easily performed via the navbar at the top of the page. From there, the other pages can be accessed by an authenticated user. 
 ![Navigation](documentation/laptop_navigation.png)
+
+</details>
+
 ### Re-use of components
 #### Spinner.js
 This components was used to render the loading spinner all across the project. When th content on the homepage, the feed of posts or top artists are loaded, the spinner will be visible
@@ -352,11 +415,26 @@ The page's responiveness was was validated using [Am I Responsive](https://ui.de
 
 ### W3C CSS validator
 
+### WAVE Tesing
+![WAVE](documentation/wave.png)
 
 ### ESLint JavaScript validator
+![ESLint](documentation/eslint.png)
 
 
 ### Lighthouse testing
+
+* Lighthouse was used for testing the page load on desktop.
+
+![Lighthouse Desktop Signup](documentation/lighthouse_desktop_signup.png)
+![Lighthouse Desktop Profile](documentation/lighthouse_desktop_profile.png)
+![Lighthouse Desktop Home](documentation/lighthouse_desktop_home.png)
+
+* Further Lighthouse reports were performed for mobile page load.
+
+![Lighthouse Mobile Signup](documentation/lighthouse_mobile_signup.png)
+![Lighthouse Mobile Profile](documentation/lighthouse_mobile_profile.png)
+![Lighthouse Mobile Home](documentation/lighthouse_mobile_home.png)
 
 ### Resolved bugs
 - The tooltip which prompts the user to enter an integer between 1 & 5 in the rating field, for some reason didn't show on the deployed version of this app.
