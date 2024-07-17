@@ -471,6 +471,25 @@ Deployments to Heroku can be dome following theses steps:
 
 When deployment is complete, you will be given a link to the deployed site.
 
+* How to clone a repository on GitHub:(Source: GitHub)
+1. Navigate to GitHub
+2. In the dropdown menu, choose "clone repository".
+3. Click the tab that corresponds to the location of the repository you want to clone. You can also click URL to manually enter the repository location.
+4. From the list of repositories, click the repository you want to clone.
+5. To select the local directory into which you want to clone the repository, next to the "Local Path" field, click "Choose", and navigate to the directory.
+6. At the bottom of the "Clone a Repository" window, click Clone.
+* How to fork a repository on GitHub:
+1. At the bottom of the "Clone a Repository" window, click Clone.
+2. Click the tab that corresponds to the location of the repository you want to clone. You can also click URL to manually enter the repository location.
+3. From the list of repositories, click the repository you want to clone.
+4. To select the local directory into which you want to clone the repository, next to the "Local Path" field, click Choose... and navigate to the directory.
+5. At the bottom of the "Clone a Repository" window, click Clone.
+6. Read the information in the "How are you planning to use this fork?" window.
+If you plan to use this fork for contributing to the original upstream repository, click To contribute to the parent project.
+If you plan to use this fork for a project not connected to the upstream, click For my own purposes.
+7. Click Continue.
+You can read extensively on how to clone or fork a repository [here](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+
 ## Credits
 
 ### Code
