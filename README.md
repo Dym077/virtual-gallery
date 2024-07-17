@@ -414,8 +414,11 @@ A complete list of tests of all the functions in the app can be viewed [here](ht
 The page's responiveness was was validated using [Am I Responsive](https://ui.dev/amiresponsive?url=https://virtual-gallery-b30861137de1.herokuapp.com/)
 
 ### W3C CSS validator
+All CSS files were validated using [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+which returned no errors.
 
 ### WAVE Tesing
+The page was tested with WAVE which returned no errors, just some contrast errors pointing at elements which are not supposed to be visible in the browser.
 ![WAVE](documentation/wave.png)
 
 ### ESLint JavaScript validator
@@ -441,12 +444,12 @@ The page's responiveness was was validated using [Am I Responsive](https://ui.de
 - [Rating](documentation/rating_integer.png)
 
  - The DOM returns a NaN message when a user submits a comment on another user's post. The reason for this error is not to be found in the front end, but should be caused when the integer from the API isn't properly read by the DOM, believing it to be a string rather than an integer. The culprit was revealed to be the serializer in the Postserializer model for the backend API missed a comments_count field so the Post model was not annotated with comments_count field. Thanks to help from tutor support we were able to pinpoint this bug and fix it.
-
-### Unresolved bugs
-- ![Bad Request](documentation/bad_request.png)
+ - ![Bad Request](documentation/bad_request.png)
 One of the most frustrating bugs I encountered during development and testing of the API, was an axioserror which was related to the "reviews" model. When attempting to post a review from the ReviewCreateForm on selected artwork, the devtools console returned "AxiosError Bad Request" For some reason, the front end could not communicate at all with the API.
 The reason for this bug was in the front end of this project. Because there were only one field for the review implemented, and the API requires four fields, the digital handshake could not be executed properly. This bug is also mentioned in the readme for the API, but was actually caused in the front end. 
- 
+
+### Unresolved bugs
+No unresolved bugs
 
 ## Deployment
 Deployments to Heroku can be dome following theses steps:

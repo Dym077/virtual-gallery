@@ -43,7 +43,11 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.7.0",
     "@types/react-router-dom": "^5.3.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.4",
+    "globals": "^15.8.0",
     "msw": "^0.35.0"
   },
   "engines": {
