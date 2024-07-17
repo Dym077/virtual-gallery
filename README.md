@@ -422,7 +422,9 @@ The page was tested with WAVE which returned no errors, just some contrast error
 ![WAVE](documentation/wave.png)
 
 ### ESLint JavaScript validator
-![ESLint](documentation/eslint.png)
+For the validation ov the JavaScript files, I used the ESLint playground 
+validation tool, which firstly returned errors for "no-usused-vars".
+When I changed the source-type to "module" and the ECMA features to "jsx", all the code passed wihout errors. I also installed ESLint to GitPod for future validation inside the IDE.
 
 
 ### Lighthouse testing
@@ -477,9 +479,16 @@ I did not rely heavily on external sources when building this project. I more or
 
 * This documentation was built from a template, heavily inspired by [TribeHub React](https://github.com/andy-guttridge/tribehub_react/blob/main/README.md)
 
+I also found inspiration, looking at these users' work:
+- [Sourdoughcircle](https://github.com/Hujanen91/sourdoughcircle_frontend/tree/main)
+- [Star Review](https://star-review-app-fb4aac8cda63.herokuapp.com/)
+
 ### Media
 Most of the styling and visual elements are relying on the React-Bootstrap library.
 Some additional cumponenents are custom elements which I designed myself.
 * The Virtual Art Gallery logotype and the default profile avatar were made using [Affinity Designer](https://affinity.serif.com/en-us/designer/)
 
 ## Acknowledgements
+- My mentor Jubril for his step-by-step guidance and advice.
+- The Slack community, which is a great source for help and support.
+- The kind tutors at Code Institute
