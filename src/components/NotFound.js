@@ -8,7 +8,7 @@ const NotFound = () => {
     <div className={styles.NotFound}>
       <Asset
         src={NoResults}
-        message={`OOps! Wrong dimension.`}
+        message={`OOps! Wrong dimension.`} // This message will display if a user navigates to a non-existing page
       />
     </div>
   );

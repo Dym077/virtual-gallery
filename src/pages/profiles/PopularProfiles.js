@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
@@ -35,6 +36,10 @@ const PopularProfiles = ({ mobile }) => {
       )}
     </Container>
   );
+};
+
+PopularProfiles.propTypes = { // propTypes are defined to optimize ESLint validation
+  mobile: PropTypes.bool,
 };
 
 export default PopularProfiles;

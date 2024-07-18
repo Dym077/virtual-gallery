@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -50,6 +51,17 @@ const Profile = (props) => {
       </div>
     </div>
   );
+};
+
+Profile.propTypes = { // propTypes to avoid ESLint problems
+  profile: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    following_id: PropTypes.number,
+    image: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+  }).isRequired,
+  mobile: PropTypes.bool.isRequired,
+  imageSize: PropTypes.number,
 };
 
 export default Profile;

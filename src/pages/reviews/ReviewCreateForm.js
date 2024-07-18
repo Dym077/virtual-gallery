@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -9,9 +10,13 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { FormGroup } from "react-bootstrap";
 
-function ReviewCreateForm(props) {
-  const { post, setPost, setReviews, profileImage, profile_id } = props;
-  
+function ReviewCreateForm({
+  post,
+  setPost,
+  setReviews,
+  profileImage,
+  profile_id,
+}) {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState("");
@@ -65,7 +70,7 @@ function ReviewCreateForm(props) {
       setErrors({});
     } catch (err) {
       // console.log(err);
-      if (err.response?.status !== 401) { // If form is not properly filled in, this should trigger an error response
+      if (err.response?.status !== 401) {  // If form is not properly filled in, this should trigger an error response
         setErrors(err.response?.data);
       }
     }
@@ -74,13 +79,10 @@ function ReviewCreateForm(props) {
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
-        <Form.Label><b>Title *</b></Form.Label>
-        <Form.Control
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleChange}
-        />
+        <Form.Label>
+          <b>Title *</b>
+        </Form.Label>
+        <Form.Control type="text" name="title" value={title} onChange={handleChange} />
         {errors?.title?.map((message, idx) => ( // These messages should alert the user
           <Alert variant="warning" key={idx}>
             {message}
@@ -96,20 +98,22 @@ function ReviewCreateForm(props) {
             className={styles.Form}
             placeholder="your review..."
             as="textarea"
-            name="content" 
+            name="content"
             value={content}
             onChange={handleChange}
             rows={2}
           />
-        </InputGroup>  
-        {errors?.content?.map((message, idx) => ( // These messages should alert the user
+        </InputGroup>
+        {errors?.content?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
             {message}
           </Alert>
         ))}
       </Form.Group>
       <FormGroup>
-        <Form.Label><b>Rating *</b></Form.Label>
+        <Form.Label>
+          <b>Rating *</b>
+        </Form.Label>
         <Form.Control
           placeholder="enter a number 1 - 5"
           type="number"
@@ -124,7 +128,9 @@ function ReviewCreateForm(props) {
         ))}
       </FormGroup>
       <FormGroup>
-        <Form.Label><b>Tags</b></Form.Label>
+        <Form.Label>
+          <b>Tags</b>
+        </Form.Label>
         <Form.Control
           placeholder="tag your review e.g #acrylic, #photography, #sculpture etc.."
           type="text"
@@ -143,5 +149,13 @@ function ReviewCreateForm(props) {
     </Form>
   );
 }
+
+ReviewCreateForm.propTypes = { // propTypes to avoid ESLint problems
+  post: PropTypes.string.isRequired,
+  setPost: PropTypes.func.isRequired,
+  setReviews: PropTypes.func.isRequired,
+  profileImage: PropTypes.string.isRequired,
+  profile_id: PropTypes.number.isRequired,
+};
 
 export default ReviewCreateForm;

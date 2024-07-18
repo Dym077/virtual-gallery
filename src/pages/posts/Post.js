@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -7,7 +8,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
-const Post = (props) => {
+const Post = (props) => { // All available props for the Post
   const {
     id,
     owner,
@@ -27,7 +28,6 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-  
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -138,6 +138,25 @@ const Post = (props) => {
       </Card.Body>
     </Card>
   );
+};
+
+Post.propTypes = {
+  id: PropTypes.number.isRequired,
+  owner: PropTypes.string.isRequired,
+  profile_id: PropTypes.number.isRequired,
+  profile_image: PropTypes.string.isRequired,
+  reviews_count: PropTypes.number.isRequired,
+  likes_count: PropTypes.number.isRequired,
+  like_id: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  notes: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  updated_at: PropTypes.string.isRequired,
+  postPage: PropTypes.bool,
+  setPosts: PropTypes.func.isRequired,
 };
 
 export default Post;

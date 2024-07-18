@@ -422,10 +422,11 @@ The page was tested with WAVE which returned no errors, just some contrast error
 ![WAVE](documentation/wave.png)
 
 ### ESLint JavaScript validator
-For the validation ov the JavaScript files, I used the ESLint playground 
-validation tool, which firstly returned errors for "no-usused-vars".
-When I changed the source-type to "module" and the ECMA features to "jsx", all the code passed wihout errors. I also installed ESLint to GitPod for future validation inside the IDE.
-
+For the validation of the JavaScript files, I initially used the ESLint validation tool.
+After installing and running ESLint locally, it returned 68 errors pointing to 
+undefined prop-types in the following files: Asset.js, Avatar.js, MoreDropdown.js, NotFound.js, CurrentUserContext.js, ProfileDataContext.js, SignInForm.js, Post.js, PostPage.js, PostsPage.js, PopularProfiles.js, Profile.js, ProfilePage.js, Review.js, ReviewCreateForm.js and ReviewEditForm.js. After adding needed prop-types to the 
+JS-files, all errors except one in "main34bd8f9b.js" were resolved.
+[ESLint Error](documentation/Screenshot%20(165).png)
 
 ### Lighthouse testing
 

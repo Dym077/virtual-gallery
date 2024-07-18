@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/ReviewCreateEditForm.module.css";
 
 function ReviewEditForm(props) {
-  const { id, content, title, rating, tags, setShowEditForm, setReviews } = props; // All props are defined here
+  const { id, content, title, rating, tags, setShowEditForm, setReviews } = props;
 
   const [formContent, setFormContent] = useState(content);
   const [formTitle, setFormTitle] = useState(title);
   const [formRating, setFormRating] = useState(rating);
   const [formTags, setFormTags] = useState(tags);
   const [errors, setErrors] = useState({});
-  // Handles all props individually
+
+  // Handle all props individually
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === "content") setFormContent(value);
@@ -24,10 +26,9 @@ function ReviewEditForm(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newErrors = {};
-    if (!formTitle.trim()) newErrors.title = ["Title is required."]; // These messages should alert the user 
-    if (!formContent.trim()) newErrors.content = ["Content is required."]; // that these are required fields
-    if (!formRating.trim()) newErrors.rating = ["Rating is required."]; // and must be filled in before submission
-    // console.log("New Errors:", newErrors);
+    if (!formTitle.trim()) newErrors.title = ["Title is required."];
+    if (!formContent.trim()) newErrors.content = ["Content is required."];
+    if (!formRating.trim()) newErrors.rating = ["Rating is required."];
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -139,5 +140,15 @@ function ReviewEditForm(props) {
     </Form>
   );
 }
+
+ReviewEditForm.propTypes = { // propTypes to avoid ESLint problems
+  id: PropTypes.number.isRequired,
+  content: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  tags: PropTypes.string.isRequired,
+  setShowEditForm: PropTypes.func.isRequired,
+  setReviews: PropTypes.func.isRequired,
+};
 
 export default ReviewEditForm;

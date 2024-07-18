@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Media from "react-bootstrap/Media";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
@@ -71,10 +72,10 @@ const Review = (props) => {
             />
           ) : (
             <>
-            <p><u>{title}</u></p>
-            <p>{content}</p>
-            <p>Rated:<b>{rating}</b></p>
-            <p>{tags}</p>
+              <p><u>{title}</u></p>
+              <p>{content}</p>
+              <p>Rated:<b>{rating}</b></p>
+              <p>{tags}</p>
             </>
           )}
         </Media.Body>
@@ -87,6 +88,20 @@ const Review = (props) => {
       </Media>
     </>
   );
+};
+
+Review.propTypes = { // propTypes to avoid ESLint problems
+  id: PropTypes.number.isRequired,
+  profile_id: PropTypes.number.isRequired,
+  profile_image: PropTypes.string.isRequired,
+  owner: PropTypes.string.isRequired,
+  updated_at: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  tags: PropTypes.string.isRequired,
+  setPost: PropTypes.func.isRequired,
+  setReviews: PropTypes.func.isRequired,
 };
 
 export default Review;

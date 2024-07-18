@@ -29,12 +29,9 @@ function PostPage() {
     const handleMount = async () => {
       try {
         const [{ data: post }, { data: reviews }] = await Promise.all([
-          axiosReq.get(
-            `/posts/${id}`
-          ),
+          axiosReq.get(`/posts/${id}`),
           axiosReq.get(`/reviews/?post=${id}`),
         ]);
-        // console.log({ id })
         setPost({ results: [post] });
         setReviews(reviews);
       } catch (err) {
@@ -50,7 +47,6 @@ function PostPage() {
         <PopularProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
-          {" "}
           {/* Form for the reviews section */}
           {currentUser ? (
             <ReviewCreateForm
@@ -65,7 +61,12 @@ function PostPage() {
           ) : null}
           {reviews.results.length ? (
             <InfiniteScroll
-              children={reviews.results.map((review) => (
+              dataLength={reviews.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!reviews.next}
+              next={() => fetchMoreData(reviews, setReviews)}
+            >
+              {reviews.results.map((review) => (
                 <Review
                   key={review.id}
                   {...review}
@@ -73,11 +74,7 @@ function PostPage() {
                   setReviews={setReviews}
                 />
               ))}
-              dataLength={reviews.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!reviews.next}
-              next={() => fetchMoreData(reviews, setReviews)}
-            />
+            </InfiniteScroll>
           ) : currentUser ? (
             <span>
               <b>Write a review on this artwork</b>

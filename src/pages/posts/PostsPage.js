@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -24,7 +25,6 @@ function PostsPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const currentUser = useCurrentUser();
-
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -70,14 +70,15 @@ function PostsPage({ message, filter = "" }) {
           <>
             {posts.results.length ? (
               <InfiniteScroll
-                children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
-                ))}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
-              />
+              >
+                {posts.results.map((post) => (
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                ))}
+              </InfiniteScroll>
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
@@ -96,5 +97,10 @@ function PostsPage({ message, filter = "" }) {
     </Row>
   );
 }
+
+PostsPage.propTypes = { // propTypes defined to fix ESLint errors
+  message: PropTypes.string.isRequired,
+  filter: PropTypes.string,
+};
 
 export default PostsPage;
