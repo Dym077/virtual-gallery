@@ -69,6 +69,7 @@ The live site can be found [here](https://virtual-gallery-b30861137de1.herokuapp
     + [ESLint JavaScript validator](#eslint-javascript-validator)
     + [WAVE web accessability testing](#wave-web-accessability-testing)
     + [Lighthouse testing](#lighthouse-testing)
+    + [Other testing](#other-testing)
     + [Resolved bugs](#resolved-bugs)
     + [Unresolved bugs](#unresolved-bugs)
   * [Deployment](#deployment)
@@ -89,6 +90,8 @@ The user stories are all related to the epics and have themselves been divided i
 The importance of proper planning became very clear to me when developing a bigger project like this.
 GitHub provides powerful and comprehensive tools, such as a Kanban board and the possibility to add a
 group of issues to boards called projects. The issues were ordered into EPIC's and User Stories. Each EPIC has a smaller or bigger group of User Stories attached to it, and was provided with milestones and labels accordning to importance. [Kanban](documentation/kanban1.png)
+All issues were initially placed in the backlog, from where they later were moved to
+the proper columns during development. [Backlog](documentation/backlog.png) 
 
 ### Epics
 The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "done" column. ![epics](documentation/kanban_epics.png)
@@ -441,6 +444,11 @@ JS-files, all errors except one in "main34bd8f9b.js" were resolved.
 ![Lighthouse Mobile Signup](documentation/lighthouse_mobile_signup.png)
 ![Lighthouse Mobile Profile](documentation/lighthouse_mobile_profile.png)
 ![Lighthouse Mobile Home](documentation/lighthouse_mobile_home.png)
+
+### Other testing
+
+The site has been tested on different devices, inluding Android, iPhone, desktop and laptop computers, and with browsers such as Mozilla Firefox, Google Chrome, Microsoft Edge and Safari.
+
 
 ### Resolved bugs
 - The tooltip which prompts the user to enter an integer between 1 & 5 in the rating field, for some reason didn't show on the deployed version of this app.
