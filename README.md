@@ -530,3 +530,4 @@ the developer using a Nikon D600 digital camera.
 - My mentor Jubril for his step-by-step guidance and advice.
 - The Slack community, which is a great source for help and support.
 - The kind tutors at Code Institute
+- Special acknowledgement to Simen Daehlin for helping me resolve the ESLint errors.
