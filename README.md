@@ -89,9 +89,9 @@ The user stories are all related to the epics and have themselves been divided i
 ## Planning
 The importance of proper planning became very clear to me when developing a bigger project like this.
 GitHub provides powerful and comprehensive tools, such as a Kanban board and the possibility to add a
-group of issues to boards called projects. The issues were ordered into EPIC's and User Stories. Each EPIC has a smaller or bigger group of User Stories attached to it, and was provided with milestones and labels accordning to importance. [Kanban](documentation/kanban1.png)
+group of issues to boards called projects. The issues were ordered into EPIC's and User Stories. Each EPIC has a smaller or bigger group of User Stories attached to it, and was provided with milestones and labels accordning to importance. ![Kanban](documentation/kanban_1.png)
 All issues were initially placed in the backlog, from where they later were moved to
-the proper columns during development. [Backlog](documentation/backlog.png) 
+the proper columns during development.
 
 ### Epics
 The epics represent the main project parts that includes all related user stories. The epics were all started in the backlog, and then moved into the epics column, where they were elected according to priority(the most important were labelled with a must-have label and a milestone of priority one). During the start of the working process, the epics were moved into the "to-do" column, later to the "in progress" column and when they fill all acceptance criteria of the related user stiories, they were moved to the "done" column. ![epics](documentation/kanban_epics.png)
@@ -367,6 +367,7 @@ Virtual Art Gallery makes use of full Create, Read, Update and Delete functional
 Due to time constraints, I had to downscale the project quite a bit, and move an EPIC called Artists to the backlog.
 This will probably be a future feature, when a new ser will be able to sign up as a regular user or as an artist.
 Looking at the user stories, these should probably e considered "could-haves" and not "must-haves".
+![Backlog](documentation/backlog.png)
 
 #### Short term future improvements
 - As an artist, the user should acquire some exclusive features, such as able to receive reviews on their work and chat with 
@@ -429,25 +430,29 @@ For the validation of the JavaScript files, I initially used the ESLint validati
 After installing and running ESLint locally, it returned 68 errors pointing to 
 undefined prop-types in the following files: Asset.js, Avatar.js, MoreDropdown.js, NotFound.js, CurrentUserContext.js, ProfileDataContext.js, SignInForm.js, Post.js, PostPage.js, PostsPage.js, PopularProfiles.js, Profile.js, ProfilePage.js, Review.js, ReviewCreateForm.js and ReviewEditForm.js. After adding needed prop-types to the 
 JS-files, all errors except one in "main34bd8f9b.js" were resolved.
-[ESLint Error](documentation/Screenshot%20(165).png)
+![ESLint Error](documentation/Screenshot%20(165).png)
 
 ### Lighthouse testing
 
 * Lighthouse was used for testing the page load on desktop.
-
+- This is the result for the loading of the signup page:
 ![Lighthouse Desktop Signup](documentation/lighthouse_desktop_signup.png)
+- Loading the profile page returned the following result:
 ![Lighthouse Desktop Profile](documentation/lighthouse_desktop_profile.png)
+- When loading the Home page, the following result was returned: 
 ![Lighthouse Desktop Home](documentation/lighthouse_desktop_home.png)
 
 * Further Lighthouse reports were performed for mobile page load.
-
+- When loading the signup page, the following result was returned:
 ![Lighthouse Mobile Signup](documentation/lighthouse_mobile_signup.png)
+- For the profile page on mobil devices, we achieved the following result:
 ![Lighthouse Mobile Profile](documentation/lighthouse_mobile_profile.png)
+- Loading the Home page, returned the following result on mobile devices:
 ![Lighthouse Mobile Home](documentation/lighthouse_mobile_home.png)
 
 ### Other testing
 
-The site has been tested on different devices, inluding Android, iPhone, desktop and laptop computers, and with browsers such as Mozilla Firefox, Google Chrome, Microsoft Edge and Safari.
+The site has been tested on different devices, inluding Android, iPhone, desktop and laptop computers, and with browsers such as Mozilla Firefox, Google Chrome, Microsoft Edge and Safari. The site is fully responsive on all devices. Worth noting is, that during responsiveness testing in devtools with dimensions being 387 x 599, the navbar tends to slightly hide the heading for top artists, capping the text "We are cool" slightly. 
 
 
 ### Resolved bugs
@@ -460,7 +465,7 @@ One of the most frustrating bugs I encountered during development and testing of
 The reason for this bug was in the front end of this project. Because there were only one field for the review implemented, and the API requires four fields, the digital handshake could not be executed properly. This bug is also mentioned in the readme for the API, but was actually caused in the front end. 
 
 ### Unresolved bugs
-No unresolved bugs
+No unresolved bugs reported. However, the ESLint testing returned one error which couldn't be located and resolved properly.
 
 ## Deployment
 Deployments to Heroku can be dome following theses steps:
@@ -515,6 +520,8 @@ I also found inspiration, looking at these users' work:
 Most of the styling and visual elements are relying on the React-Bootstrap library.
 Some additional cumponenents are custom elements which I designed myself.
 * The Virtual Art Gallery logotype and the default profile avatar were made using [Affinity Designer](https://affinity.serif.com/en-us/designer/)
+* Additional photographs, used for the signup and signin pages were taken by 
+the developer using a Nikon D600 digital camera.
 
 ## Acknowledgements
 - My mentor Jubril for his step-by-step guidance and advice.
