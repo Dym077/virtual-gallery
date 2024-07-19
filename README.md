@@ -431,6 +431,8 @@ After installing and running ESLint locally, it returned 68 errors pointing to
 undefined prop-types in the following files: Asset.js, Avatar.js, MoreDropdown.js, NotFound.js, CurrentUserContext.js, ProfileDataContext.js, SignInForm.js, Post.js, PostPage.js, PostsPage.js, PopularProfiles.js, Profile.js, ProfilePage.js, Review.js, ReviewCreateForm.js and ReviewEditForm.js. After adding needed prop-types to the 
 JS-files, all errors except one in "main34bd8f9b.js" were resolved.
 ![ESLint Error](documentation/Screenshot%20(165).png)
+To individually resolve this error, I had to modify the eslint.config.mjs file to ignore the alerts in the compilation files.
+![ESLint config](documentation/eslint_config.png) 
 
 ### Lighthouse testing
 
@@ -466,7 +468,7 @@ One of the most frustrating bugs I encountered during development and testing of
 The reason for this bug was in the front end of this project. Because there were only one field for the review implemented, and the API requires four fields, the digital handshake could not be executed properly. This bug is also mentioned in the readme for the API, but was actually caused in the front end. 
 
 ### Unresolved bugs
-No unresolved bugs reported. However, the ESLint testing returned one error which couldn't be located and resolved properly.
+No unresolved bugs reported.
 
 ## Deployment
 Deployments to Heroku can be dome following theses steps:

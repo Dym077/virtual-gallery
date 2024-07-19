@@ -3,6 +3,7 @@ import globals from 'globals';
 
 export default [
   {
+    ignores: ["build/**"],
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: "latest",
