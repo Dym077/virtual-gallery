@@ -452,7 +452,8 @@ JS-files, all errors except one in "main34bd8f9b.js" were resolved.
 
 ### Other testing
 
-The site has been tested on different devices, inluding Android, iPhone, desktop and laptop computers, and with browsers such as Mozilla Firefox, Google Chrome, Microsoft Edge and Safari. The site is fully responsive on all devices. Worth noting is, that during responsiveness testing in devtools with dimensions being 387 x 599, the navbar tends to slightly hide the heading for top artists, capping the text "We are cool" slightly. 
+The site has been tested on different devices, inluding Android, iPhone, desktop and laptop computers, and with browsers such as Mozilla Firefox, Google Chrome, Microsoft Edge and Safari. The site is fully responsive on all devices. Worth noting is, that during responsiveness testing in devtools with dimensions being 387 x 599, the navbar tends to slightly hide the heading for top artists, capping the text "We are cool" slightly.
+![We are cool](documentation/wearecool.png)
 
 
 ### Resolved bugs
