@@ -380,7 +380,8 @@ other user. As for now, all users can upload artwork and be able to receive revi
 - An artist should not have to rate personal artwork to add comments.
 - When users are followed and their artwork is being reviewed and/ or liked, they
 should be alerted.
-- New default images for redular users vs artists.
+- New default images for regular users vs artists.
+- A different, more readable font for the reviews and posts sections.
 
 #### Long term future features
 - A feature where users can order artwork from their favourite artists could be implemented in a future iteration of this project.
